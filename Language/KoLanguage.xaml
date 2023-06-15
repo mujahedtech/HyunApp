@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+    <!--#region Language Pgae-->
+
+    <sys:String x:Key="Confirm Button">
+        확인하다
+    </sys:String>
+
+
+    <!--#endregion-->
+
+
+    <!--#region Permission Pgae-->
+
+    <sys:String x:Key="PermissionTitle">앱 접근 권한 안내</sys:String>
+
+    <sys:String x:Key="label1Permission"
+                xml:space="preserve">PacketGo 서비스 이용을 위한 &#x0a; 앱 접근 권한 안내</sys:String>
+
+    <sys:String x:Key="label2Permission"
+                xml:space="preserve">해당 기능 이용 시 동의를 받고 있으며,&#x0a; 허용하지 않아도 서비스 이용이 가능합니다.</sys:String>
+
+
+    <sys:String x:Key="NotificationTitle"
+                xml:space="preserve">알림 (선택)</sys:String>
+
+    <sys:String x:Key="NotificationDetails"
+                xml:space="preserve">접속 완료 및 해제 등 알림</sys:String>
+
+
+    <sys:String x:Key="CameraTitle"
+                xml:space="preserve">카메라(선택)</sys:String>
+
+    <sys:String x:Key="CameraDetails"
+                xml:space="preserve">QR 인증을 위한 활용</sys:String>
+
+
+    <sys:String x:Key="FaceIdTitle"
+                xml:space="preserve">생체 인증 (선택)</sys:String>
+
+    <sys:String x:Key="FaceIdDetails"
+                xml:space="preserve">간편 비밀번호 입력 대체 간편 인증</sys:String>
+
+
+    <sys:String x:Key="LocationTitle"
+                xml:space="preserve">위치 정보 권한 (필수)</sys:String>
+
+    <sys:String x:Key="LocationDetails"
+                xml:space="preserve">스페이스 접속 위치 확인</sys:String>
+
+
+    <sys:String x:Key="SettingTitle"
+                xml:space="preserve">시스템 관리 권한 (필수)</sys:String>
+
+    <sys:String x:Key="SettingDetails"
+                xml:space="preserve">시스템 관리</sys:String>
+
+    <sys:String x:Key="NetworkTitle"
+                xml:space="preserve">로컬 네트워크 권한 (필수)</sys:String>
+
+    <sys:String x:Key="NetworkDetails"
+                xml:space="preserve">로컬 네트워크 접근 관리</sys:String>
+
+    <sys:String x:Key="SettingTitle2"
+                xml:space="preserve">드라이버 권한 (선택)</sys:String>
+
+    <sys:String x:Key="SettingDetails2"
+                xml:space="preserve">드라이버 권한</sys:String>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

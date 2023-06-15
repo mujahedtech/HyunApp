@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="HyunApp.Pages.LoginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HyunApp.Pages"
+             mc:Ignorable="d"
+             Height="1024"
+             Width="768"
+             xmlns:Control="clr-namespace:HyunApp.Controls"
+             >
+    <Grid>
+        <Grid Background="#17161D">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="126"/>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+
+            <StackPanel Height="428" Margin="189 0" Grid.Row="1" >
+                <TextBlock
+                    FontSize="40" FontWeight="Bold"
+                    Text="PacketGo" Style="{StaticResource TextStyle}"
+                    Margin="104 48 104 0"
+                    />
+
+                <TextBlock FontSize="16"
+                        TextAlignment="Center"
+                           Text="Switch to Universe"
+                           Style="{StaticResource TextStyle}"
+                           Margin="128.5 8 128.5 0" />
+
+                <StackPanel Margin="24 64 24 0">
+                    <Control:TextBoxClearButton Height="86"
+                                                Placeholder="아이디"/>
+
+                    <Control:TextBoxClearButton Margin="0 24 0 0" Height="86"
+                                                Placeholder="비밀번호" />
+                </StackPanel>
+
+
+
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,495 @@
+﻿<Window x:Class="HyunApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HyunApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="1024"
+        Width="768"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        x:Name="MainWindowff"
+        WindowStartupLocation="CenterScreen"
+        xmlns:pages="clr-namespace:HyunApp.Pages"
+        
+        >
+
+    <Window.Resources>
+
+        <Style x:Key="ButtonIconTitle"
+               TargetType="Button">
+
+
+            <Setter Property="MinHeight"
+                    Value="30" />
+
+            <Setter Property="Foreground"
+                    Value="{StaticResource TextMainColor}" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border">
+
+                            <Grid HorizontalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Path  Width="32"
+                                       Height="25.76"
+                                       Name="ico"
+                                       Data="{TemplateBinding Content}"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Stretch="Uniform" />
+
+                                <TextBlock Foreground="{TemplateBinding  Foreground}"
+                                           FontSize="24"
+                                           FontFamily="Pretendard"
+                                           FontWeight="Bold"
+                                           Grid.Column="2"
+                                           Text="{TemplateBinding Uid }"
+                                           VerticalAlignment="Center"
+                                           LineHeight="29" />
+                            </Grid>
+
+
+                        </Border>
+
+
+
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseCaptured"
+                                     Value="True">
+
+
+
+
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard HandoffBehavior="SnapshotAndReplace">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="1"
+                                                             To="0"
+                                                             Duration="0:0:.1"
+                                                             AutoReverse="True" />
+
+
+
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="0"
+                                                             To="1"
+                                                             Duration="0:0:.1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+
+
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+
+        </Style>
+
+        <Style x:Key="ButtonIconHyperlink"
+               TargetType="Button">
+
+
+            <Setter Property="MinHeight"
+                    Value="30" />
+
+            <Setter Property="Foreground"
+                    Value="{StaticResource TextMainColor}" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border">
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Path  Width="15"
+                                       Height="15"
+                                       Name="ico"
+                                       Data="{TemplateBinding Content}"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Stretch="Uniform" />
+
+                                <TextBlock Foreground="{TemplateBinding  Foreground}"
+                                           FontSize="15"
+                                           FontFamily="Lato"
+                                           FontStyle="Normal"
+                                           Grid.Column="2"
+                                           Text="{TemplateBinding Uid }"
+                                           VerticalAlignment="Center" />
+                            </Grid>
+
+
+                        </Border>
+
+
+
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseCaptured"
+                                     Value="True">
+
+
+
+
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard HandoffBehavior="SnapshotAndReplace">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="1"
+                                                             To="0"
+                                                             Duration="0:0:.1"
+                                                             AutoReverse="True" />
+
+
+
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="0"
+                                                             To="1"
+                                                             Duration="0:0:.1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+
+
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+
+        </Style>
+
+        <Style x:Key="ButtonIconImage"
+               TargetType="Button">
+
+
+            <Setter Property="MinHeight"
+                    Value="30" />
+
+            <Setter Property="Foreground"
+                    Value="{StaticResource TextMainColor}" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border">
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Image  Width="15"
+                                        Height="15"
+                                        Name="ico"
+                                        Source="/images/logout.png"
+                                        Stretch="Uniform" />
+
+                                <TextBlock Foreground="{TemplateBinding  Foreground}"
+                                           FontSize="15"
+                                           FontFamily="Lato"
+                                           FontStyle="Normal"
+                                           Grid.Column="2"
+                                           Text="{TemplateBinding Uid }"
+                                           VerticalAlignment="Center" />
+                            </Grid>
+
+
+                        </Border>
+
+
+
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseCaptured"
+                                     Value="True">
+
+
+
+
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard HandoffBehavior="SnapshotAndReplace">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="1"
+                                                             To="0"
+                                                             Duration="0:0:.1"
+                                                             AutoReverse="True" />
+
+
+
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                                             Storyboard.TargetProperty="(Border.Opacity)"
+                                                             From="0"
+                                                             To="1"
+                                                             Duration="0:0:.1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+
+
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+
+        </Style>
+
+
+
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--#region Header Bar-->
+
+            <Grid  x:Name="HeaderGrid"
+                   Grid.Row="0"
+                   MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown"
+                   Background="{StaticResource HeaderBar}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+
+                <Button Command="{Binding SentMessageCommand}"
+                        Style="{StaticResource ButtonIcon}"
+                        Content="{StaticResource HeaderButtonLeft}"
+                        Foreground="White"
+                        MinWidth="30"
+                        HorizontalAlignment="Stretch"
+                        Margin="20 0" />
+
+
+
+                <Button Grid.Column="2"
+                        Command="{Binding SentMessageCommand}"
+                        Style="{StaticResource ButtonIcon}"
+                        Content="{StaticResource Minimize}"
+                        Foreground="White"
+                        MinWidth="30"
+                        HorizontalAlignment="Stretch" />
+
+             
+                <Button Grid.Column="3"
+                        Command="{Binding SentMessageCommand}"
+                        Style="{StaticResource ButtonIcon}"
+                        Content="{StaticResource Close}"
+                        Foreground="White"
+                        MinWidth="30"
+                        HorizontalAlignment="Stretch"
+                        Margin="20 0" />
+
+
+
+                <TextBlock VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Grid.Column="1"
+                           Foreground="White"
+                           Text="{Binding ElementName=MainWindowff,Path=Title}"
+                           FontSize="18"
+                           FontFamily="Pretendard" />
+
+
+
+
+            </Grid>
+
+
+            <!--#endregion-->
+
+
+            <!--#region Content-->
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="274" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!--#region LeftSide-->
+
+                <Grid Background="{StaticResource LeftSide}"
+                      Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="87*" />
+                        <RowDefinition />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="144" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+
+                    <!--#region Top Logo-->
+                    <Button Margin="28,0,0,0"
+                            HorizontalAlignment="Left"
+                            Uid="PacketGo"
+                            Content="{StaticResource MainLogo }"
+                            Style="{StaticResource ButtonIconTitle}" />
+
+                    <!--#endregion-->
+
+                    <!--#region Middle Logo-->
+                    <StackPanel Grid.Row="2">
+
+
+                        <TextBlock FontFamily="Pretendard"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   Width="143"
+                                   Height="52"
+                                   TextWrapping="Wrap"
+                                   Foreground="{StaticResource TextMainColor}"
+                                   LineHeight="26"
+                                   Text="접속된 스페이스가
+없습니다. " />
+
+                    </StackPanel>
+
+                    <!--#endregion-->
+
+
+
+                    <!--#region Bottom Logo-->
+                    <StackPanel Margin="36,0,36,0"
+                                Grid.Row="5">
+
+                        <Separator  Background="#393747" />
+                        <Grid Height="30" />
+
+                        <Button Margin="0 0 0 0"
+                                HorizontalAlignment="Left"
+                                Uid="기술지원"
+                                Content="{StaticResource Technical Support }"
+                                Style="{StaticResource ButtonIconHyperlink}" />
+
+                        <Button Margin="0 0 0 0"
+                                HorizontalAlignment="Left"
+                                Uid="설정"
+                                Content="{StaticResource Setting }"
+                                Style="{StaticResource ButtonIconHyperlink}" />
+                        <Button Margin="0 0 0 0"
+                                HorizontalAlignment="Left"
+                                Uid="로그아웃"
+                                Content=""
+                                Style="{StaticResource ButtonIconImage}" />
+                    </StackPanel>
+                </Grid>
+
+                <!--#endregion-->
+
+                <!--#endregion-->
+
+
+
+                <!--#region Right Side-->
+                <Grid Background="{StaticResource SecondContentColor}"
+                      Grid.Column="1">
+
+
+                    <pages:Initial_Access />
+
+                </Grid>
+
+
+                <!--#endregion-->
+
+
+
+
+
+
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Window>

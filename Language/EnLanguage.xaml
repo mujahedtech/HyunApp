@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    
+    
+    <!--#region Language Pgae-->
+
+    <sys:String x:Key="Confirm Button">
+        Confirm
+    </sys:String>
+   
+
+    <!--#endregion-->
+
+
+    <!--#region Permission Pgae-->
+
+    <sys:String x:Key="PermissionTitle">Guide to App Access Permissions</sys:String>
+
+
+    <!--<sys:String x:Key="label1Permission"
+                xml:space="preserve">
+
+        Line1&#x0a;Line2
+    </sys:String>-->
+
+
+   
+
+    <sys:String x:Key="label1Permission"
+                xml:space="preserve">App access permission information &#x0a; for using PacketGo service</sys:String>
+
+
+    <sys:String x:Key="label2Permission"
+                xml:space="preserve">Consent is obtained when using the function,&#x0a; and you can use the service even if you do not allow it.</sys:String>
+
+
+    <sys:String x:Key="NotificationTitle"
+                xml:space="preserve">Notifications (optional)</sys:String>
+
+    <sys:String x:Key="NotificationDetails"
+                xml:space="preserve">App notifications and favorites</sys:String>
+
+
+    <sys:String x:Key="CameraTitle"
+                xml:space="preserve">Camera (optional)</sys:String>
+
+    <sys:String x:Key="CameraDetails"
+                xml:space="preserve">Utilization for QR authentication</sys:String>
+
+    <sys:String x:Key="FaceIdTitle"
+                xml:space="preserve">Biometric authentication (optional)</sys:String>
+
+    <sys:String x:Key="FaceIdDetails"
+                xml:space="preserve">Simple password input </sys:String>
+
+    <sys:String x:Key="LocationTitle"
+                xml:space="preserve">Location info permission (required)</sys:String>
+
+    <sys:String x:Key="LocationDetails"
+                xml:space="preserve">Check your space access location</sys:String>
+
+
+    <sys:String x:Key="SettingTitle"
+                xml:space="preserve">System management (required)</sys:String>
+
+    <sys:String x:Key="SettingDetails"
+                xml:space="preserve">system management</sys:String>
+
+    <sys:String x:Key="NetworkTitle"
+                xml:space="preserve">Local network permission (required)</sys:String>
+
+    <sys:String x:Key="NetworkDetails"
+                xml:space="preserve">Manage local network access</sys:String>
+
+    <sys:String x:Key="SettingTitle2"
+                xml:space="preserve">Driver permission (optional)</sys:String>
+
+    <sys:String x:Key="SettingDetails2"
+                xml:space="preserve">driver rights</sys:String>
+
+
+
+    <!--#endregion-->
+
+
+</ResourceDictionary>

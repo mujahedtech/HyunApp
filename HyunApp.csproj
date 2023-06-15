@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\logout.png" />
+    <None Remove="Images\splash.jpg" />
+    <None Remove="Images\splash.png" />
+    <None Remove="Images\Splash.svg" />
+    <None Remove="Images\SplashImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\logout.png" />
+    <Resource Include="Images\splash.jpg" />
+    <Resource Include="Images\splash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>
